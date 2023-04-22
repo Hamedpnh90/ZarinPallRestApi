@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+    <div class="row">
+
+        @if(ViewBag.IsSuccess == true)
+        {
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">عملیات موفقیت امیز!</h4>
+            <p>تراکنش مورد نظر با موفقیت انجام شد </p>
+            <hr>
+            <p class="mb-0">کد پیگیری :ViewBag.code</p>
+        </div>
+        }
+        else
+        {
+        <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">خطا!</h4>
+            <p>تراکنش مورد نظر با موفقیت انجام نشد </p>
+            <hr>
+
+        </div>
+        }
+
+    </div>
+
+</div>
